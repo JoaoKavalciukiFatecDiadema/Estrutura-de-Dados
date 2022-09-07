@@ -1,13 +1,13 @@
 public class Stack{
-    int stack[];
+    char stack[];
     int size;
 
     public Stack(int capacidade){
-        this.stack = new int[capacidade];
+        this.stack = new char[capacidade];
         this.size = 0;
     }
 
-    public void push(int element) throws Exception{
+    public void push(char element) throws Exception{
         if(this.size == stack.length){
             //adicioar método de ampliarPilha
             throw new Exception("Pilha cheia");
@@ -18,18 +18,18 @@ public class Stack{
         stack[size-1] = element;
     }
 
-    public int pop() throws Exception{
+    public char pop() throws Exception{
         if(this.size == 0){
             throw new Exception("Empty stack");
         }
 
-        int answer = stack[size-1];
+        char answer = stack[size-1];
         size--;
         return answer;
         
     }
 
-    public int peek() throws Exception{
+    public char peek() throws Exception{
         return stack[size-1];
     }
 
@@ -37,14 +37,14 @@ public class Stack{
     @Override
     public String toString(){
         StringBuilder string = new StringBuilder();
-        string.append("[");
+        string.append("");
  
         int i = 0;
-        for(i = 0; i<this.size-1; i++){
-            string.append(stack[i] + ", ");
+        for(i = 0; i<=this.size-1; i++){
+            string.append(stack[i]);
         }
- 
-        if(i == size-1) string.append(stack[i] + "]");
+        string.append("");
+
         return string.toString();
     }
 }
