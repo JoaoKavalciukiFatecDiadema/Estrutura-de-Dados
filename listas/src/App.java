@@ -8,5 +8,12 @@ public class App {
         lista.removeInicio();
         lista.removeFinal();
         System.out.println(lista);
+        System.out.println();
+        LinkedList linkedList = new LinkedList();
+        linkedList.adicionaInicio(5);
+        linkedList.adicionaInicio(2);
+
+        System.out.println(linkedList.listaReversa());
+
     }
 }
