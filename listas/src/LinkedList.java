@@ -6,7 +6,7 @@ public class LinkedList {
     }
 
 
-    public void adicionaInicio(int elemento){
+    public void adicionaInicio(Aluno elemento){
         No novoNo = new No(elemento);
         /*Instancia o novo nó com o novo elemento do início da lista*/
         novoNo.prox = inicioLista;
@@ -15,8 +15,8 @@ public class LinkedList {
         /*Atributo inicio da Lista o novo nó*/
     }
 
-    public int removeInicio(){
-        int resp = -1;
+    public Aluno removeInicio(){
+        Aluno resp = null;
         
         if(this.inicioLista == null) {
             System.out.println("Lista vazia");
@@ -28,7 +28,8 @@ public class LinkedList {
         return resp;
     }
 
-    public boolean buscarElemento(int elemento){
+    public boolean buscarElemento(Aluno
+     elemento){
         No auxiliar = inicioLista;
         //Enquanto n achar o elemento pedido E for diferente de nulo continua a busca
         while(auxiliar != null && auxiliar.elemento != elemento){
@@ -65,11 +66,11 @@ public class LinkedList {
         string.append("[");
 
         while(auxiliar.prox != null) {
-            string.append(auxiliar.elemento + ", ");
+            string.append(auxiliar.elemento.toString() + "\n");
             auxiliar = auxiliar.prox;
         }
 
-        if(auxiliar.prox == null) string.append(auxiliar.elemento + "]");
+        if(auxiliar.prox == null) string.append(auxiliar.elemento.toString());
 
         
         return string.toString();
