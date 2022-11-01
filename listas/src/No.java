@@ -1,10 +1,10 @@
 
 public class No {
     //nome da variavel dado no slide
-    public int elemento;
+    public Aluno elemento;
     public No prox;
     
-    public No(int elemento){
+    public No(Aluno elemento){
         this.elemento = elemento;
         this.prox = null;
     }

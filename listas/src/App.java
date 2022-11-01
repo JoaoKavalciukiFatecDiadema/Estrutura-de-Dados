@@ -10,10 +10,10 @@ public class App {
         System.out.println(lista);
         System.out.println();
         LinkedList linkedList = new LinkedList();
-        linkedList.adicionaInicio(5);
-        linkedList.adicionaInicio(2);
+        linkedList.adicionaInicio(new Aluno("João", "2"));
+        linkedList.adicionaInicio(new Aluno("Zeca", "3"));
 
-        System.out.println(linkedList.listaReversa());
+        System.out.println(linkedList.toString());
 
     }
 }
