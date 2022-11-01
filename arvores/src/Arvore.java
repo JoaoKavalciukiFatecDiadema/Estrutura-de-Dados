@@ -4,6 +4,10 @@ public class Arvore {
         raiz = null;
     }
 
+    public No getRaiz(){
+        return this.raiz;
+    }
+
     public void adicionaElemento(int elemento){
         No novo = new No(elemento);
 
